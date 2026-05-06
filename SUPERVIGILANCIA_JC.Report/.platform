@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SUPERVIGILANCIA_JC"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6467cd13-2550-493b-b0ea-366593401250"
+  }
+}

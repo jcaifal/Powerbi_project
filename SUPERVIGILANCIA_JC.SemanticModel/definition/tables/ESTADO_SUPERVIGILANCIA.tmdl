@@ -1,0 +1,32 @@
+table ESTADO_SUPERVIGILANCIA
+	lineageTag: 3671870f-7711-4945-b5fb-a3be73f5adba
+
+	column IDESTADO
+		dataType: int64
+		formatString: 0
+		lineageTag: 9320b6d7-91d8-4b25-963e-39d3964dadaa
+		summarizeBy: none
+		sourceColumn: IDESTADO
+
+		annotation SummarizationSetBy = Automatic
+
+	column ESTADODESCRIPCION
+		dataType: string
+		lineageTag: e1bedd84-bd7f-46bc-afc7-a4455b2f7407
+		summarizeBy: none
+		sourceColumn: ESTADODESCRIPCION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ESTADO_SUPERVIGILANCIA = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    ESTADO_SUPERVIGILANCIA_Table = Origen{[Item="ESTADO_SUPERVIGILANCIA",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(ESTADO_SUPERVIGILANCIA_Table,{{"IDESTADO", Int64.Type}, {"ESTADODESCRIPCION", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

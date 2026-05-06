@@ -1,0 +1,162 @@
+relationship 5121544a-b3b9-46eb-9199-78d6feb52f3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: TRAMITES_DOM.FechaCreacion
+	toColumn: LocalDateTable_0b66f5dc-f908-45a5-892b-aaa01e6571ed.Date
+
+relationship 88c3a5ea-e157-4a2d-ab59-9328cb16d6a3
+	fromColumn: PAGO_CONTABLE.IDTIPOTRAMITE
+	toColumn: TIPO_TRAMITE.IdTipoTramite
+
+relationship fd68e6f4-35d6-4908-9c72-9687bd2f56f1
+	fromColumn: TRAMITES_DOM.IdTipoTramite
+	toColumn: TIPO_TRAMITE.IdTipoTramite
+
+relationship 669d3264-c6bc-44c5-8d85-2bd736827ef9
+	fromColumn: SUBTIPO_TRAMITE.IdTipoTramite
+	toColumn: TIPO_TRAMITE.IdTipoTramite
+
+relationship 2dbe18d4-4940-4bd3-9eeb-5b41955c50f6
+	isActive: false
+	fromColumn: PAGO_CONTABLE.IDSUBTIPOTRAMITE
+	toColumn: SUBTIPO_TRAMITE.IdSubTipoTramite
+
+relationship 67863e60-ff25-4775-928f-f3b0cb158dec
+	fromColumn: TRAMITES_DOM.IdSolicitudEstado
+	toColumn: SOLICITUD_ESTADO.IdSolicitudEstado
+
+relationship 01ec0edc-e24d-44b2-982e-9a3db76ffb0c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BITACORA.FechaInicio
+	toColumn: LocalDateTable_11ba8cd2-fd85-4f78-86c5-01c6c88c30ba.Date
+
+relationship 32d74f75-9092-446e-b92c-ea2f755cbbc6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BITACORA.FechaTermino
+	toColumn: LocalDateTable_02738159-7b59-4325-9a3d-858a230e9982.Date
+
+relationship df188664-b092-4afc-8a2a-31b982a1f83f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BITACORA.FechaGestion
+	toColumn: LocalDateTable_b4f5eb9a-c6da-431a-a3a4-33c95fe70414.Date
+
+relationship 1615afef-9739-4595-b750-d619dd196b4d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: BITACORA.FechaRegistro
+	toColumn: LocalDateTable_81578210-b887-4f20-96e7-2248413c0574.Date
+
+relationship 2bfec455-fd01-40f8-a33d-42e98f8ae262
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RECLAMO.FechaInicio
+	toColumn: LocalDateTable_2b24a4d9-0778-4e62-98a8-b123a5437176.Date
+
+relationship d55ced39-ec9e-45f9-a93a-bd87ca28cdd3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RECLAMO.FechaRevision
+	toColumn: LocalDateTable_dec936e7-baba-4cda-b226-c408cc819b63.Date
+
+relationship 941aae40-fdfd-4fa5-ba3b-7acf11d27ccc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RECLAMO.FechaProceso
+	toColumn: LocalDateTable_e9a4cd53-f78a-41d6-abc7-7421f9fe8009.Date
+
+relationship ec0fe816-660b-438e-a76b-9ca07fa8a0c2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RECLAMO.FechaAsignacion
+	toColumn: LocalDateTable_5f59d610-727b-4205-b5d2-8c8aa9e2f6b5.Date
+
+relationship 4454db3e-94c3-4133-9bb2-c15dcc9e95eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RECLAMO.FechaCreacion
+	toColumn: LocalDateTable_51207a1e-3e0f-4340-8df8-b98a8b63b30a.Date
+
+relationship 4abb452c-3b93-4704-bced-6d62a9733165
+	fromColumn: RECLAMO.IdFase
+	toColumn: 'FASE RECLAMO'.IDFASE
+
+relationship 84039c73-da69-4810-a149-e61b9ad8b883
+	joinOnDateBehavior: datePartOnly
+	fromColumn: RECLAMO.FechaPosibleTermino
+	toColumn: LocalDateTable_c27d8ed9-2f19-4649-b646-975ab06ddb21.Date
+
+relationship ea9ec78c-2714-4471-a0f2-eb2c586448ba
+	fromColumn: RECLAMO.IdEstado
+	toColumn: ESTADO_SUPERVIGILANCIA.IDESTADO
+
+relationship caf0ff93-3b00-4fc2-b24a-0fd1213c1ea3
+	fromColumn: RECLAMO.IdTipoReclamo
+	toColumn: TIPO_RECLAMO.IdTipoReclamo
+
+relationship 602283c4-567b-4ab9-a70e-e5b9fa51b304
+	fromColumn: RECLAMO.IdRegion
+	toColumn: REGION.IDREGION
+
+relationship a49a04ef-5085-475e-8770-239a5e7b8634
+	fromColumn: RECLAMO.IdComuna
+	toColumn: COMUNA.IDCOMUNA
+
+relationship cad03041-3854-48c2-9041-66c4140c7259
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Descarga'.FechaInicio
+	toColumn: LocalDateTable_86e9555a-4a80-41bf-b230-a4ee6a57ddb5.Date
+
+relationship 4980b7ff-ef3b-46a6-90ce-4cd0548c88f3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Descarga'.FechaRevision
+	toColumn: LocalDateTable_1c0f29fe-8626-4593-a8df-bafe5efc78fa.Date
+
+relationship 358b0921-879f-4d48-8469-7fdf4c160165
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Descarga'.FechaProceso
+	toColumn: LocalDateTable_6fb4bc53-6b6a-4698-98d4-b418924d67f2.Date
+
+relationship e1a8b0b9-b171-4e1e-acd3-526016014084
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Descarga'.FechaAsignacion
+	toColumn: LocalDateTable_e898273c-7d8f-4550-8963-325d9415d0fa.Date
+
+relationship bf7386d0-1747-4a66-a733-b277fae4d747
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Descarga'.FechaPosibleTermino
+	toColumn: LocalDateTable_735449f6-0f3f-433b-b72a-71cc0d4a0ace.Date
+
+relationship e346d961-7e5d-492c-97ad-dda922ea242d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Tabla Descarga'.FechaCreacion
+	toColumn: LocalDateTable_4ba97a28-8377-4647-8472-a9ab93b8650e.Date
+
+relationship 5bfa917b-e1de-440d-a31c-9c0994d91159
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Tabla Descarga'.IdSolicitud
+	toColumn: RECLAMO.IdSolicitud
+
+relationship 026598d7-6620-4c63-a767-6a3baeb196fc
+	fromColumn: 'Tabla Descarga'.IdTipoTramite
+	toColumn: TIPO_TRAMITE.IdTipoTramite
+
+relationship a14a5517-6422-4c5e-8d76-7bd70d31449f
+	isActive: false
+	fromColumn: 'Tabla Descarga'.IdFase
+	toColumn: 'FASE RECLAMO'.IDFASE
+
+relationship 42cf6afd-bf06-4489-8b64-dd7a461ec58e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Tabla Descarga'.IdReclamo
+	toColumn: BITACORA.IdReclamo
+
+relationship f4ca9d72-342a-4bbf-a31d-0bdb208b88a1
+	isActive: false
+	fromColumn: 'Tabla Descarga'.IdEstado
+	toColumn: ESTADO_SUPERVIGILANCIA.IDESTADO
+
+relationship c031f54a-7991-4298-add3-3233079166d3
+	isActive: false
+	fromColumn: 'Tabla Descarga'.IdRegion
+	toColumn: REGION.IDREGION
+
+relationship f842119a-a7e6-4849-91bb-9334a46bf7f5
+	isActive: false
+	fromColumn: 'Tabla Descarga'.IdComuna
+	toColumn: COMUNA.IDCOMUNA
+

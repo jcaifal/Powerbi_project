@@ -1,0 +1,57 @@
+table Usuario
+	lineageTag: 48cad2c5-0ebd-4199-bd7d-f8fd9dd27da0
+
+	column IdUsuario
+		dataType: int64
+		formatString: 0
+		lineageTag: c6b96396-f08c-433d-9565-1430c2adbd2e
+		summarizeBy: sum
+		sourceColumn: IdUsuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoUsuario
+		dataType: string
+		lineageTag: 8b5770c7-db3b-4e6c-aca2-4a7501a9ea58
+		summarizeBy: none
+		sourceColumn: TipoUsuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: aa4a54f9-f667-4357-81b8-cf63a5449586
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdRegion
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c98cf7e-765c-435c-8013-33e65bb5e781
+		summarizeBy: sum
+		sourceColumn: IdRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cuenta
+		dataType: string
+		lineageTag: 8cf82183-0e16-4cca-9847-167570fb3d1c
+		summarizeBy: none
+		sourceColumn: Cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Usuario = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Usuario_Table = Origen{[Item="Usuario",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Usuario_Table,{{"IdUsuario", Int64.Type}, {"TipoUsuario", type text}, {"Nombre", type text}, {"IdRegion", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

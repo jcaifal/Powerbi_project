@@ -1,0 +1,15 @@
+role ROL_DOM
+	modelPermission: read
+
+	tablePermission RECLAMO = ```
+			VAR usuariovar = USERPRINCIPALNAME()
+			
+			VAR informacion = FILTER (Usuario, Usuario[Cuenta] = usuariovar)
+			
+			VAR regionvar = SELECTCOLUMNS (Informacion, "@IdRegion", Usuario[IdRegion])
+			return 
+			IF (regionvar = 77, TRUE(),  RECLAMO[IdRegion] in regionvar)
+			```
+
+	annotation PBI_Id = 5e2bdcf206ff441abffdb41bdcb25499
+

@@ -1,0 +1,243 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 251.63844848485516,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1490.450099423573,
+            "y": 0
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "6ec13776-93d4-49fe-a209-98985543d926",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 366.77756479361091,
+            "y": -6.5587917212169486
+          },
+          "nodeIndex": "PAGO_CONTABLE",
+          "nodeLineageTag": "28175164-58bf-4e09-b6bc-368d36dab9f8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 914.634988026415,
+            "y": 663.24902764765193
+          },
+          "nodeIndex": "SOLICITUD_ESTADO",
+          "nodeLineageTag": "60375d02-ce2c-4b9a-83b7-2ea48fc3bddb",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 553.49241499813718
+          },
+          "nodeIndex": "SUBTIPO_TRAMITE",
+          "nodeLineageTag": "5ae75878-5e9a-4967-88ec-291e80ee316d",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 278.333837679456,
+            "y": 347.10470771583437
+          },
+          "nodeIndex": "TIPO_TRAMITE",
+          "nodeLineageTag": "ef6094f4-4f17-4e7d-8ba7-306c829b31da",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 627.81902918387209,
+            "y": 350.84316442585964
+          },
+          "nodeIndex": "TRAMITES_DOM",
+          "nodeLineageTag": "4899b6fd-5cc3-488c-a6b9-0c0d1c81ea86",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 2238.9237152117025,
+            "y": 858.41268505489541
+          },
+          "nodeIndex": "BITACORA",
+          "nodeLineageTag": "054dca54-a885-4bbc-a3d0-2789be584525",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1890.0666606547479,
+            "y": 949.16778331993407
+          },
+          "nodeIndex": "COMUNA",
+          "nodeLineageTag": "ecb4b60e-5916-4dd9-a155-733d2418c2db",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1237.7698685841917,
+            "y": 176.85875722368476
+          },
+          "nodeIndex": "FASE RECLAMO",
+          "nodeLineageTag": "cdb5ffb9-91df-4589-8156-9f8e7a677fc8",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 2045.8812349528489,
+            "y": 195.81276145206425
+          },
+          "nodeIndex": "RECLAMO",
+          "nodeLineageTag": "154418b1-ee67-4a53-b97a-ccd893be9bd7",
+          "size": {
+            "height": 300,
+            "width": 230
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 2386.097033626374,
+            "y": 624.48173019596368
+          },
+          "nodeIndex": "REGION",
+          "nodeLineageTag": "cc8ecd6b-e7ea-448c-8920-1c4e0ef676c1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 2255.9037013657157,
+            "y": 0
+          },
+          "nodeIndex": "TIPO_RECLAMO",
+          "nodeLineageTag": "84a18cb5-debc-4d2f-8eef-40cfc011af78",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 2708.9037013657157,
+            "y": 238.62451382382596
+          },
+          "nodeIndex": "ESTADO_SUPERVIGILANCIA",
+          "nodeLineageTag": "3671870f-7711-4945-b5fb-a3be73f5adba",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 2521.6661525375907,
+            "y": 0
+          },
+          "nodeIndex": "DisTipReclamo",
+          "nodeLineageTag": "2a670e97-658d-44ea-9ca5-073dd8caba29",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 2757.9037013657157,
+            "y": 475.62451382382596
+          },
+          "nodeIndex": "RegionComunaDistintas",
+          "nodeLineageTag": "5976268a-b5e2-4200-bc7c-2bdf826d5aae",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1793.7534592632426,
+            "y": 17.170953941812911
+          },
+          "nodeIndex": "Tabla Descarga",
+          "nodeLineageTag": "3a07a394-8292-4c25-9ac8-84e4ac23283d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 2766.9037013657157,
+            "y": 744.624513823826
+          },
+          "nodeIndex": "Usuario",
+          "nodeLineageTag": "48cad2c5-0ebd-4199-bd7d-f8fd9dd27da0",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 44.905697313103921,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

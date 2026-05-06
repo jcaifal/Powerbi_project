@@ -1,0 +1,41 @@
+table TIPO_TRAMITE
+	lineageTag: ef6094f4-4f17-4e7d-8ba7-306c829b31da
+
+	column IdTipoTramite
+		dataType: int64
+		formatString: 0
+		lineageTag: 040cb45f-42b6-4efd-b6eb-dcd39c2a8fe7
+		summarizeBy: none
+		sourceColumn: IdTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: f6bba4fd-49e2-4316-a4f2-129e18450d99
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activo
+		dataType: int64
+		formatString: 0
+		lineageTag: 77863465-9070-4db2-a5ec-bddaab3d4905
+		summarizeBy: sum
+		sourceColumn: Activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TIPO_TRAMITE = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla3_Table = Origen{[Item="Tabla3",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla3_Table,{{"IdTipoTramite", Int64.Type}, {"Descripcion", type text}, {"Activo", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

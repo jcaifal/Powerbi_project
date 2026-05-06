@@ -1,0 +1,58 @@
+table SUBTIPO_TRAMITE
+	lineageTag: 5ae75878-5e9a-4967-88ec-291e80ee316d
+
+	column IdSubTipoTramite
+		dataType: int64
+		formatString: 0
+		lineageTag: b8e0f513-d3eb-4b05-b619-e129a6911ffb
+		summarizeBy: sum
+		sourceColumn: IdSubTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoTramite
+		dataType: int64
+		formatString: 0
+		lineageTag: 811a3486-b823-420c-a4a2-3d957b1c3180
+		summarizeBy: none
+		sourceColumn: IdTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: af4b513f-f02d-43ee-9412-ae31cf82f26a
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activo
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ade4adf-adf1-488e-9414-fffc89d4ab4f
+		summarizeBy: sum
+		sourceColumn: Activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreCorto
+		dataType: string
+		lineageTag: dfab42b9-146b-483b-abdf-9f87b7384f4f
+		summarizeBy: none
+		sourceColumn: NombreCorto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SUBTIPO_TRAMITE = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla4_Table = Origen{[Item="Tabla4",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla4_Table,{{"IdSubTipoTramite", Int64.Type}, {"IdTipoTramite", Int64.Type}, {"Descripcion", type text}, {"Activo", Int64.Type}, {"NombreCorto", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

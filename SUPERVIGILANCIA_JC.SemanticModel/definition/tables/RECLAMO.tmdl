@@ -1,0 +1,311 @@
+table RECLAMO
+	lineageTag: 154418b1-ee67-4a53-b97a-ccd893be9bd7
+
+	column IdReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: df4d7ea4-6a79-41c3-be0f-2dd12a212a5e
+		summarizeBy: sum
+		sourceColumn: IdReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdEstado
+		dataType: int64
+		formatString: 0
+		lineageTag: f80c550a-d33a-4f35-96cb-02a41cab8c19
+		summarizeBy: none
+		sourceColumn: IdEstado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoTramite
+		dataType: int64
+		formatString: 0
+		lineageTag: 3296cdd8-fdb8-41db-bbc9-7b5204f759ee
+		summarizeBy: sum
+		sourceColumn: IdTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: dcb8fff8-af8a-44b8-8d32-b97b41f6a87d
+		summarizeBy: none
+		sourceColumn: IdTipoReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdFase
+		dataType: int64
+		formatString: 0
+		lineageTag: f1281096-2b93-4ca6-9617-f9efdb8ee663
+		summarizeBy: none
+		sourceColumn: IdFase
+
+		annotation SummarizationSetBy = Automatic
+
+	column Autor
+		dataType: string
+		lineageTag: fa37ea94-0e68-414b-8a26-f2cddce3915a
+		summarizeBy: none
+		sourceColumn: Autor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Creador
+		dataType: int64
+		formatString: 0
+		lineageTag: 02747053-de51-4a01-970f-6d3604fdb001
+		summarizeBy: sum
+		sourceColumn: Creador
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdRegion
+		dataType: int64
+		formatString: 0
+		lineageTag: 933c084a-d61f-44b4-93e8-212bff692c59
+		summarizeBy: none
+		sourceColumn: IdRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdComuna
+		dataType: int64
+		formatString: 0
+		lineageTag: a57a63ce-4a02-4e89-ba6e-613f8bbc617e
+		summarizeBy: none
+		sourceColumn: IdComuna
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cc16e1b7-03c2-4efc-97f7-ae00cd20d36e
+		summarizeBy: none
+		sourceColumn: FechaInicio
+
+		variation Variación
+			isDefault
+			relationship: 2bfec455-fd01-40f8-a33d-42e98f8ae262
+			defaultHierarchy: LocalDateTable_2b24a4d9-0778-4e62-98a8-b123a5437176.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRevision
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 51ccd996-149c-4dde-b69c-2164c56da3e4
+		summarizeBy: none
+		sourceColumn: FechaRevision
+
+		variation Variación
+			isDefault
+			relationship: d55ced39-ec9e-45f9-a93a-bd87ca28cdd3
+			defaultHierarchy: LocalDateTable_dec936e7-baba-4cda-b226-c408cc819b63.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaProceso
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6488eef2-3fc4-41b7-8b9a-1fda87298c7b
+		summarizeBy: none
+		sourceColumn: FechaProceso
+
+		variation Variación
+			isDefault
+			relationship: 941aae40-fdfd-4fa5-ba3b-7acf11d27ccc
+			defaultHierarchy: LocalDateTable_e9a4cd53-f78a-41d6-abc7-7421f9fe8009.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSolicitud
+		dataType: int64
+		formatString: 0
+		lineageTag: d009747b-22d7-4e6f-bbcf-9ca4e60c11e7
+		summarizeBy: none
+		sourceColumn: IdSolicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaAsignacion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 67afeac2-60bb-49b3-ab17-0b2a257e941c
+		summarizeBy: none
+		sourceColumn: FechaAsignacion
+
+		variation Variación
+			isDefault
+			relationship: ec0fe816-660b-438e-a76b-9ca07fa8a0c2
+			defaultHierarchy: LocalDateTable_5f59d610-727b-4205-b5d2-8c8aa9e2f6b5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AsignadoA
+		dataType: int64
+		formatString: 0
+		lineageTag: a7142484-8f20-46c6-a3d9-bc92d087a652
+		summarizeBy: sum
+		sourceColumn: AsignadoA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: ea47fde2-ef6b-4b8f-8881-0c10eabd5f78
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaPosibleTermino
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a790d52f-a89d-41e5-8555-a6db40148934
+		summarizeBy: none
+		sourceColumn: FechaPosibleTermino
+
+		variation Variación
+			isDefault
+			relationship: 84039c73-da69-4810-a149-e61b9ad8b883
+			defaultHierarchy: LocalDateTable_c27d8ed9-2f19-4649-b646-975ab06ddb21.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolioSolicitud
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f304a0b-4ae7-48f6-8f5d-0b74feec50b2
+		summarizeBy: sum
+		sourceColumn: FolioSolicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 780d5584-487a-403c-812a-ecd2b919deaa
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variación
+			isDefault
+			relationship: 4454db3e-94c3-4133-9bb2-c15dcc9e95eb
+			defaultHierarchy: LocalDateTable_51207a1e-3e0f-4340-8df8-b98a8b63b30a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalDiasGestion
+		dataType: int64
+		formatString: 0
+		lineageTag: 36c5182b-fc2e-4a97-acfd-e855151b8934
+		summarizeBy: sum
+		sourceColumn: TotalDiasGestion
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalMaximoDias
+		dataType: int64
+		formatString: 0
+		lineageTag: 9699f445-7c44-406e-a1ae-4f614c9f9128
+		summarizeBy: sum
+		sourceColumn: TotalMaximoDias
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plazo
+		dataType: int64
+		formatString: 0
+		lineageTag: 77b46784-9455-4c72-b1b0-8afa8164c7ab
+		summarizeBy: sum
+		sourceColumn: Plazo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoSubtramite
+		dataType: int64
+		formatString: 0
+		lineageTag: 75c593bc-8134-4bfb-ae2d-60c758a01a07
+		summarizeBy: sum
+		sourceColumn: IdTipoSubtramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolioReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: fd71b516-783e-4feb-b4ae-ff6d6d199911
+		summarizeBy: sum
+		sourceColumn: FolioReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DifDiasProceso
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ab0c349-4e0a-4dcf-9394-abd69021f1aa
+		summarizeBy: sum
+		sourceColumn: DifDiasProceso
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column PorDifDiasProceso
+		dataType: int64
+		lineageTag: 29700386-7544-4704-a7f2-6ad74e6f5ace
+		summarizeBy: sum
+		sourceColumn: PorDifDiasProceso
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstadoFinal = ```
+			
+			
+			SWITCH(
+			                      TRUE,
+			                      'RECLAMO'[PorDifDiasProceso] = BLANK(), "Resuelto",                                     
+			                      'RECLAMO'[PorDifDiasProceso] > 0   && 'RECLAMO'[PorDifDiasProceso] < 34 ,"A Tiempo",
+			                      'RECLAMO'[PorDifDiasProceso] >= 34 && 'RECLAMO'[PorDifDiasProceso] < 66 ,"Por Vencer",
+			                      'RECLAMO'[PorDifDiasProceso] >= 66 && 'RECLAMO'[PorDifDiasProceso] < 99 ,"Atrasados",
+			                      'RECLAMO'[PorDifDiasProceso] >= 99                                      ,"Fuera de Plazo"
+			)
+			```
+		dataType: string
+		lineageTag: 848cc4bb-e07b-463f-9f60-dda515e4d2e3
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RECLAMO = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla9_Table = Origen{[Item="Tabla9",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla9_Table,{{"IdReclamo", Int64.Type}, {"IdEstado", Int64.Type}, {"IdTipoTramite", Int64.Type}, {"IdTipoReclamo", Int64.Type}, {"IdFase", Int64.Type}, {"Autor", type text}, {"Creador", Int64.Type}, {"IdRegion", Int64.Type}, {"IdComuna", Int64.Type}, {"FechaInicio", type datetime}, {"FechaRevision", type datetime}, {"FechaProceso", type datetime}, {"IdSolicitud", Int64.Type}, {"FechaAsignacion", type datetime}, {"AsignadoA", Int64.Type}, {"Descripcion", type text}, {"FechaPosibleTermino", type text}, {"FolioSolicitud", Int64.Type}, {"FechaCreacion", type datetime}, {"TotalDiasGestion", Int64.Type}, {"TotalMaximoDias", Int64.Type}, {"Plazo", Int64.Type}, {"IdTipoSubtramite", Int64.Type}, {"FolioReclamo", Int64.Type}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "FECHACUMPLIDA", each if [FechaPosibleTermino] < DateTime.LocalNow() then 0 else 1),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"FechaPosibleTermino", type datetime}}),
+				    #"Errores quitados" = Table.RemoveRowsWithErrors(#"Tipo cambiado1", {"FechaPosibleTermino"}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Errores quitados",{"FECHACUMPLIDA"}),
+				    #"Personalizada agregada1" = Table.AddColumn(#"Columnas quitadas", "Personalizado", each Duration.Days(DateTime.LocalNow() - [FechaProceso])),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Personalizada agregada1",{{"Personalizado", "DifDiasProceso"}}),
+				    #"Personalizada agregada2" = Table.AddColumn(#"Columnas con nombre cambiado", "PorDifDiasProceso", each ([DifDiasProceso] / [Plazo]) * 100),
+				    #"Redondeo insertado" = Table.AddColumn(#"Personalizada agregada2", "Redondear", each Number.Round([PorDifDiasProceso], 2), type number),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Redondeo insertado",{"Redondear"})
+				in
+				    #"Columnas quitadas1"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,43 @@
+table RegionComunaDistintas
+	lineageTag: 5976268a-b5e2-4200-bc7c-2bdf826d5aae
+
+	column IdComuna
+		formatString: 0
+		lineageTag: a4a5a2c8-28f9-492d-bcc2-93cf357b3fa3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: RECLAMO[IdComuna]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comuna = ```
+			CALCULATE(SELECTEDVALUE(COMUNA[COMUNA]), FILTER('COMUNA', 'COMUNA'[IDCOMUNA] = RegionComunaDistintas[IdComuna])) 
+			```
+		lineageTag: 85fd9af4-0c60-48a1-913a-abeab62b8359
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdRegion = ```
+			CALCULATE(SELECTEDVALUE(COMUNA[REGION]), FILTER('COMUNA', 'COMUNA'[IDCOMUNA] = RegionComunaDistintas[IdComuna])) 
+			```
+		formatString: 0
+		lineageTag: a3afc937-edde-4cc4-bc2d-79e1dc3b7623
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region = ```
+			CALCULATE(SELECTEDVALUE(REGION[REGION]), FILTER('REGION', 'REGION'[IDREGION] = RegionComunaDistintas[IdRegion])) 
+			```
+		lineageTag: cd96a9ef-f917-4e27-9bcc-d81b5870507c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RegionComunaDistintas = calculated
+		mode: import
+		source = DISTINCT(RECLAMO[IdComuna])
+
+	annotation PBI_Id = d95e65558cff440f96c89c294b94ce51
+

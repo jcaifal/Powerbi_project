@@ -1,0 +1,333 @@
+table 'Tabla Descarga'
+	lineageTag: 3a07a394-8292-4c25-9ac8-84e4ac23283d
+
+	column IdReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: 4eb6311e-debd-4950-9ea4-08527a15c1f5
+		summarizeBy: none
+		sourceColumn: IdReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdEstado
+		dataType: int64
+		formatString: 0
+		lineageTag: 80ea7cdb-d666-44bb-a378-189a7bfe558c
+		summarizeBy: sum
+		sourceColumn: IdEstado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoTramite
+		dataType: int64
+		formatString: 0
+		lineageTag: 21239967-32dc-4e1c-8c87-e98c87a99038
+		summarizeBy: none
+		sourceColumn: IdTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: c5a547e0-a6bc-49df-8f21-0cd38831d667
+		summarizeBy: sum
+		sourceColumn: IdTipoReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdFase
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c869c01-9ad0-4663-ad3d-94d6d87bb5e4
+		summarizeBy: sum
+		sourceColumn: IdFase
+
+		annotation SummarizationSetBy = Automatic
+
+	column Autor
+		dataType: string
+		lineageTag: bb867556-fbc2-4548-a946-2d828affa147
+		summarizeBy: none
+		sourceColumn: Autor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Creador
+		dataType: int64
+		formatString: 0
+		lineageTag: 35a03059-811d-45c5-a240-4f879dfcd576
+		summarizeBy: sum
+		sourceColumn: Creador
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdRegion
+		dataType: int64
+		formatString: 0
+		lineageTag: 9282d5bf-345b-41d0-9e66-7d999627f48c
+		summarizeBy: sum
+		sourceColumn: IdRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdComuna
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fa22def-1137-413c-8da6-64807a3d7fae
+		summarizeBy: sum
+		sourceColumn: IdComuna
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 95331c25-6a25-4454-acee-17ff0c905d0e
+		summarizeBy: none
+		sourceColumn: FechaInicio
+
+		variation Variación
+			isDefault
+			relationship: cad03041-3854-48c2-9041-66c4140c7259
+			defaultHierarchy: LocalDateTable_86e9555a-4a80-41bf-b230-a4ee6a57ddb5.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRevision
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8beecc80-80f9-4f47-a8d1-bfb8a0555f59
+		summarizeBy: none
+		sourceColumn: FechaRevision
+
+		variation Variación
+			isDefault
+			relationship: 4980b7ff-ef3b-46a6-90ce-4cd0548c88f3
+			defaultHierarchy: LocalDateTable_1c0f29fe-8626-4593-a8df-bafe5efc78fa.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaProceso
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 127572b1-d00a-49f3-93be-2cf75fd96087
+		summarizeBy: none
+		sourceColumn: FechaProceso
+
+		variation Variación
+			isDefault
+			relationship: 358b0921-879f-4d48-8469-7fdf4c160165
+			defaultHierarchy: LocalDateTable_6fb4bc53-6b6a-4698-98d4-b418924d67f2.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSolicitud
+		dataType: int64
+		formatString: 0
+		lineageTag: e3ef4ef7-c2ed-4d75-aff5-7c54b20312f4
+		summarizeBy: none
+		sourceColumn: IdSolicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaAsignacion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0621c937-42d0-4e26-afd3-a7ebbcd6779a
+		summarizeBy: none
+		sourceColumn: FechaAsignacion
+
+		variation Variación
+			isDefault
+			relationship: e1a8b0b9-b171-4e1e-acd3-526016014084
+			defaultHierarchy: LocalDateTable_e898273c-7d8f-4550-8963-325d9415d0fa.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column AsignadoA
+		dataType: int64
+		formatString: 0
+		lineageTag: 8aade007-5c9a-42c6-8a94-b50fc921d7da
+		summarizeBy: sum
+		sourceColumn: AsignadoA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: feb1698c-5dee-4bd1-bcd0-a8ca63a961bb
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaPosibleTermino
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cd8dab1d-28b2-4a44-8728-287e024060e9
+		summarizeBy: none
+		sourceColumn: FechaPosibleTermino
+
+		variation Variación
+			isDefault
+			relationship: bf7386d0-1747-4a66-a733-b277fae4d747
+			defaultHierarchy: LocalDateTable_735449f6-0f3f-433b-b72a-71cc0d4a0ace.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolioSolicitud
+		dataType: int64
+		formatString: 0
+		lineageTag: fadb2189-7187-455c-9151-876ab5b0b13a
+		summarizeBy: sum
+		sourceColumn: FolioSolicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 91a9e7d8-f8f3-48e3-8f0b-c8b71fc2202e
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variación
+			isDefault
+			relationship: e346d961-7e5d-492c-97ad-dda922ea242d
+			defaultHierarchy: LocalDateTable_4ba97a28-8377-4647-8472-a9ab93b8650e.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalDiasGestion
+		dataType: int64
+		formatString: 0
+		lineageTag: e4233ea9-be36-437f-9744-27718a86b380
+		summarizeBy: sum
+		sourceColumn: TotalDiasGestion
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalMaximoDias
+		dataType: int64
+		formatString: 0
+		lineageTag: a9de59df-e461-4aa6-9ba0-3634da8b1371
+		summarizeBy: sum
+		sourceColumn: TotalMaximoDias
+
+		annotation SummarizationSetBy = Automatic
+
+	column Plazo
+		dataType: int64
+		formatString: 0
+		lineageTag: 04e0b060-cddf-44b7-b1d1-7037a08562d5
+		summarizeBy: sum
+		sourceColumn: Plazo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoSubtramite
+		dataType: int64
+		formatString: 0
+		lineageTag: d0e8d587-b82c-415b-84b2-c08cdc9a789c
+		summarizeBy: sum
+		sourceColumn: IdTipoSubtramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolioReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: 377fb5c1-b6c4-4b57-9275-fd201d99239c
+		summarizeBy: sum
+		sourceColumn: FolioReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column DifDiasProceso
+		dataType: string
+		lineageTag: 39cbc388-3621-46a3-9e61-b60411b04714
+		summarizeBy: none
+		sourceColumn: DifDiasProceso
+
+		annotation SummarizationSetBy = Automatic
+
+	column PorDifDiasProceso
+		dataType: string
+		lineageTag: 7c420f34-27c3-4df6-9597-39cc4d90c097
+		summarizeBy: none
+		sourceColumn: PorDifDiasProceso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'REGION.REGION'
+		dataType: string
+		lineageTag: eb42d7bb-adb6-4963-895c-aaa1767fe7af
+		summarizeBy: none
+		sourceColumn: REGION.REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COMUNA.COMUNA'
+		dataType: string
+		lineageTag: 7047304d-bd78-470b-8e5c-c290c16dac44
+		summarizeBy: none
+		sourceColumn: COMUNA.COMUNA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FASE RECLAMO.RECLAMO'
+		dataType: string
+		lineageTag: 7ef1cd8c-dc69-49f2-a3c1-8cdedd833aba
+		summarizeBy: none
+		sourceColumn: FASE RECLAMO.RECLAMO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TIPO_TRAMITE.Descripcion'
+		dataType: string
+		lineageTag: 9ed2948f-b99a-4cb7-a020-010dc608f897
+		summarizeBy: none
+		sourceColumn: TIPO_TRAMITE.Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'TIPO_RECLAMO.Descripcion'
+		dataType: string
+		lineageTag: 744487e8-a71a-47ce-9925-2ace72be60a2
+		summarizeBy: none
+		sourceColumn: TIPO_RECLAMO.Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ESTADO_SUPERVIGILANCIA.ESTADODESCRIPCION'
+		dataType: string
+		lineageTag: ec5f09c0-6618-4e53-a084-66dcd45febf4
+		summarizeBy: none
+		sourceColumn: ESTADO_SUPERVIGILANCIA.ESTADODESCRIPCION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabla Descarga' = m
+		mode: import
+		source =
+				let
+				    Origen = Table.NestedJoin(RECLAMO, {"IdRegion"}, REGION, {"IDREGION"}, "REGION", JoinKind.LeftOuter),
+				    #"Se expandió REGION" = Table.ExpandTableColumn(Origen, "REGION", {"IDREGION", "REGION"}, {"REGION.IDREGION", "REGION.REGION"}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Se expandió REGION", {"IdComuna"}, COMUNA, {"IDCOMUNA"}, "COMUNA", JoinKind.LeftOuter),
+				    #"Se expandió COMUNA" = Table.ExpandTableColumn(#"Consultas combinadas", "COMUNA", {"IDCOMUNA", "COMUNA", "REGION"}, {"COMUNA.IDCOMUNA", "COMUNA.COMUNA", "COMUNA.REGION"}),
+				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió COMUNA", {"IdFase"}, #"FASE RECLAMO", {"IDFASE"}, "FASE RECLAMO", JoinKind.LeftOuter),
+				    #"Se expandió FASE RECLAMO" = Table.ExpandTableColumn(#"Consultas combinadas1", "FASE RECLAMO", {"IDFASE", "RECLAMO"}, {"FASE RECLAMO.IDFASE", "FASE RECLAMO.RECLAMO"}),
+				    #"Consultas combinadas2" = Table.NestedJoin(#"Se expandió FASE RECLAMO", {"IdTipoTramite"}, TIPO_TRAMITE, {"IdTipoTramite"}, "TIPO_TRAMITE", JoinKind.LeftOuter),
+				    #"Se expandió TIPO_TRAMITE" = Table.ExpandTableColumn(#"Consultas combinadas2", "TIPO_TRAMITE", {"Descripcion"}, {"TIPO_TRAMITE.Descripcion"}),
+				    #"Consultas combinadas3" = Table.NestedJoin(#"Se expandió TIPO_TRAMITE", {"IdTipoReclamo"}, TIPO_RECLAMO, {"IdTipoReclamo"}, "TIPO_RECLAMO", JoinKind.LeftOuter),
+				    #"Se expandió TIPO_RECLAMO" = Table.ExpandTableColumn(#"Consultas combinadas3", "TIPO_RECLAMO", {"Descripcion"}, {"TIPO_RECLAMO.Descripcion"}),
+				    #"Consultas combinadas4" = Table.NestedJoin(#"Se expandió TIPO_RECLAMO", {"IdEstado"}, ESTADO_SUPERVIGILANCIA, {"IDESTADO"}, "ESTADO_SUPERVIGILANCIA", JoinKind.LeftOuter),
+				    #"Se expandió ESTADO_SUPERVIGILANCIA" = Table.ExpandTableColumn(#"Consultas combinadas4", "ESTADO_SUPERVIGILANCIA", {"ESTADODESCRIPCION"}, {"ESTADO_SUPERVIGILANCIA.ESTADODESCRIPCION"}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Se expandió ESTADO_SUPERVIGILANCIA",{"REGION.IDREGION", "COMUNA.IDCOMUNA", "COMUNA.REGION", "FASE RECLAMO.IDFASE"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

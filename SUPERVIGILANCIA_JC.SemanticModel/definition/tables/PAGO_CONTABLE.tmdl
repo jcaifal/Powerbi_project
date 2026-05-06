@@ -1,0 +1,209 @@
+table PAGO_CONTABLE
+	lineageTag: 28175164-58bf-4e09-b6bc-368d36dab9f8
+
+	column IDSOLICITUD
+		dataType: int64
+		formatString: 0
+		lineageTag: 863a636b-1572-46d7-8b31-3dc1c66f2d50
+		summarizeBy: sum
+		sourceColumn: IDSOLICITUD
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDPAGO
+		dataType: int64
+		formatString: 0
+		lineageTag: e4c6b8c6-8941-4096-ab72-cc9257547fbe
+		summarizeBy: sum
+		sourceColumn: IDPAGO
+
+		annotation SummarizationSetBy = Automatic
+
+	column GIROINGRESOMUNICIPAL
+		dataType: int64
+		formatString: 0
+		lineageTag: c48e4ee8-cb20-4d3c-bad5-c9c427caaad3
+		summarizeBy: sum
+		sourceColumn: GIROINGRESOMUNICIPAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHAULTIMAMODIFICACION
+		dataType: string
+		lineageTag: 06737376-db85-416c-b294-a317f9cff080
+		summarizeBy: none
+		sourceColumn: FECHAULTIMAMODIFICACION
+
+		annotation SummarizationSetBy = Automatic
+
+	column FOLIOSOLICITUD
+		dataType: string
+		lineageTag: 0e77d579-5cca-4e6e-af45-8569f22a3009
+		summarizeBy: none
+		sourceColumn: FOLIOSOLICITUD
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHAGIROINGRESOMUNICIPAL
+		dataType: string
+		lineageTag: 3a6155ad-102a-4619-87e8-8b0f1ebc11fb
+		summarizeBy: none
+		sourceColumn: FECHAGIROINGRESOMUNICIPAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODIGOMUNICIPALIDAD
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cede383-d41f-46e9-a0ca-f0fcfe8ae84a
+		summarizeBy: sum
+		sourceColumn: CODIGOMUNICIPALIDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDMUNICIPALIDAD
+		dataType: string
+		lineageTag: d288bfb9-270a-4cdf-b3d9-63dc2dcaa42f
+		summarizeBy: none
+		sourceColumn: IDMUNICIPALIDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDTIPOTRAMITE
+		dataType: int64
+		formatString: 0
+		lineageTag: 8622223e-9a47-4845-b2b9-cf647eb30fe7
+		summarizeBy: none
+		sourceColumn: IDTIPOTRAMITE
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDSUBTIPOTRAMITE
+		dataType: int64
+		formatString: 0
+		lineageTag: 94f02156-ba21-4662-9d68-a08df6b5d34b
+		summarizeBy: sum
+		sourceColumn: IDSUBTIPOTRAMITE
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDFASE
+		dataType: int64
+		formatString: 0
+		lineageTag: 96a8e240-f005-4084-b36d-fa0588236e5d
+		summarizeBy: sum
+		sourceColumn: IDFASE
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDTIPOPAGO
+		dataType: int64
+		formatString: 0
+		lineageTag: d3e2690a-f361-44db-ba3c-622cf7970be9
+		summarizeBy: sum
+		sourceColumn: IDTIPOPAGO
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDMEDIOPAGO
+		dataType: int64
+		formatString: 0
+		lineageTag: 45f9b9ce-5fea-4a32-8f2b-9043669141d2
+		summarizeBy: sum
+		sourceColumn: IDMEDIOPAGO
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARCAREGISTRO
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b7c9cc0-ecb8-4a16-bbf5-1c4075eff6bb
+		summarizeBy: sum
+		sourceColumn: MARCAREGISTRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIRECCIONCOMPUESTA
+		dataType: string
+		lineageTag: a28e3362-0de4-4826-a944-140d6c6cbc9a
+		summarizeBy: none
+		sourceColumn: DIRECCIONCOMPUESTA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ROL
+		dataType: string
+		lineageTag: 8322d2e0-33f9-4e29-a1ed-ae1154df0d93
+		summarizeBy: none
+		sourceColumn: ROL
+
+		annotation SummarizationSetBy = Automatic
+
+	column IDUSUARIO
+		dataType: string
+		lineageTag: 894ee9f1-62ba-4ce1-966c-170fc02f2333
+		summarizeBy: none
+		sourceColumn: IDUSUARIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column RUTSOLICITANTE
+		dataType: string
+		lineageTag: b669480f-68ec-4231-b336-01d3f98b9622
+		summarizeBy: none
+		sourceColumn: RUTSOLICITANTE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIGITOVERIFICADOR
+		dataType: string
+		lineageTag: 7e21a1f3-5449-418e-be91-7b66f5ce5d30
+		summarizeBy: none
+		sourceColumn: DIGITOVERIFICADOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOMBRE
+		dataType: string
+		lineageTag: 9d3108c9-cab2-4a3c-8544-d90535f31859
+		summarizeBy: none
+		sourceColumn: NOMBRE
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMAIL
+		dataType: string
+		lineageTag: 97fe5366-2d18-41ef-8075-37302752c0f2
+		summarizeBy: none
+		sourceColumn: EMAIL
+
+		annotation SummarizationSetBy = Automatic
+
+	column REPOSITORIO
+		dataType: string
+		lineageTag: 97840f9a-b7ab-460d-8c85-eb0dbd9541a1
+		summarizeBy: none
+		sourceColumn: REPOSITORIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PATH
+		dataType: string
+		lineageTag: 8b84566b-af8a-4ffc-b477-943f5df425ca
+		summarizeBy: none
+		sourceColumn: PATH
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PAGO_CONTABLE = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla1_Table = Origen{[Item="Tabla1",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla1_Table,{{"IDSOLICITUD", Int64.Type}, {"IDPAGO", Int64.Type}, {"GIROINGRESOMUNICIPAL", Int64.Type}, {"FECHAULTIMAMODIFICACION", type text}, {"FOLIOSOLICITUD", type text}, {"FECHAGIROINGRESOMUNICIPAL", type text}, {"CODIGOMUNICIPALIDAD", Int64.Type}, {"IDMUNICIPALIDAD", type any}, {"IDTIPOTRAMITE", Int64.Type}, {"IDSUBTIPOTRAMITE", Int64.Type}, {"IDFASE", Int64.Type}, {"IDTIPOPAGO", Int64.Type}, {"IDMEDIOPAGO", Int64.Type}, {"MARCAREGISTRO", Int64.Type}, {"DIRECCIONCOMPUESTA", type text}, {"ROL", type any}, {"IDUSUARIO", type any}, {"RUTSOLICITANTE", type any}, {"DIGITOVERIFICADOR", type any}, {"NOMBRE", type text}, {"EMAIL", type text}, {"REPOSITORIO", type text}, {"PATH", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

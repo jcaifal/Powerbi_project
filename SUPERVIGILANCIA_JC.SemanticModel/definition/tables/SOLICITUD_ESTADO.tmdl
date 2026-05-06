@@ -1,0 +1,58 @@
+table SOLICITUD_ESTADO
+	lineageTag: 60375d02-ce2c-4b9a-83b7-2ea48fc3bddb
+
+	column IdSolicitudEstado
+		dataType: int64
+		formatString: 0
+		lineageTag: 91344556-3330-4729-8116-8c32d4882545
+		summarizeBy: none
+		sourceColumn: IdSolicitudEstado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSolicitudEstadoPadre
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c27e05b-d86e-4dfc-becd-815536140398
+		summarizeBy: none
+		sourceColumn: IdSolicitudEstadoPadre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: cf24ac87-fc15-495b-a2d3-dcd8ece19dcd
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activo
+		dataType: int64
+		formatString: 0
+		lineageTag: 5104bbe7-590e-4a73-92d1-d944ec6b26ec
+		summarizeBy: none
+		sourceColumn: Activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreCorto
+		dataType: string
+		lineageTag: cc079aeb-8968-4ab1-8723-9ea4893651a1
+		summarizeBy: none
+		sourceColumn: NombreCorto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SOLICITUD_ESTADO = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla5_Table = Origen{[Item="Tabla5",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla5_Table,{{"IdSolicitudEstado", Int64.Type}, {"IdSolicitudEstadoPadre", Int64.Type}, {"Descripcion", type text}, {"Activo", Int64.Type}, {"NombreCorto", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
