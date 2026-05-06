@@ -1,0 +1,26 @@
+table DisTipReclamo
+	lineageTag: 2a670e97-658d-44ea-9ca5-073dd8caba29
+
+	column IdTipoReclamo
+		formatString: 0
+		lineageTag: df42b529-2a43-4acf-b9c4-207c53aa2e42
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: RECLAMO[IdTipoReclamo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Reclamo' = ```
+			CALCULATE(SELECTEDVALUE(TIPO_RECLAMO[Descripcion]), FILTER('TIPO_RECLAMO','TIPO_RECLAMO'[IdTipoReclamo] = 'DisTipReclamo'[IdTipoReclamo])) 
+			```
+		lineageTag: 69f4bb40-7ae1-4177-8bc2-c7d1b5b2fd55
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DisTipReclamo = calculated
+		mode: import
+		source = DISTINCT('RECLAMO'[IdTipoReclamo])
+
+	annotation PBI_Id = 97a801a27c4b463e85e5f3b974369491
+

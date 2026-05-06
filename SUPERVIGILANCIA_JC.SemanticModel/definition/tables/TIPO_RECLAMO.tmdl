@@ -1,0 +1,41 @@
+table TIPO_RECLAMO
+	lineageTag: 84a18cb5-debc-4d2f-8eef-40cfc011af78
+
+	column IdTipoReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: 57a3319e-6526-4d90-b4f8-ce5af0743d93
+		summarizeBy: none
+		sourceColumn: IdTipoReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 145ec6c8-9ca7-4e9c-9d46-d08356139dbc
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activo
+		dataType: int64
+		formatString: 0
+		lineageTag: 9504f8f9-4fb4-4981-909e-79044ea31f83
+		summarizeBy: none
+		sourceColumn: Activo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TIPO_RECLAMO = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla12_Table = Origen{[Item="Tabla12",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla12_Table,{{"IdTipoReclamo", Int64.Type}, {"Descripcion", type text}, {"Activo", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

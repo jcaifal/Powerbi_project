@@ -1,0 +1,152 @@
+table BITACORA
+	lineageTag: 054dca54-a885-4bbc-a3d0-2789be584525
+
+	column IdBitacora
+		dataType: int64
+		formatString: 0
+		lineageTag: 1159bb2c-fcec-4f85-b067-3b2fe9e293e1
+		summarizeBy: sum
+		sourceColumn: IdBitacora
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdReclamo
+		dataType: int64
+		formatString: 0
+		lineageTag: 27fdb5ca-4d40-4a2c-9fc4-1bd157885216
+		summarizeBy: none
+		sourceColumn: IdReclamo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoBitacora
+		dataType: int64
+		formatString: 0
+		lineageTag: fa53c657-96b1-4885-a29c-bb8d385fa651
+		summarizeBy: sum
+		sourceColumn: IdTipoBitacora
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdEstado
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c1deecc-16c3-49a4-80c3-da1271a420d2
+		summarizeBy: sum
+		sourceColumn: IdEstado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdUsuario
+		dataType: int64
+		formatString: 0
+		lineageTag: d6a852d4-ef9c-43ca-9370-966feca10f6a
+		summarizeBy: sum
+		sourceColumn: IdUsuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9236bb14-8486-4663-8fc0-d44ba89885b2
+		summarizeBy: none
+		sourceColumn: FechaInicio
+
+		variation Variación
+			isDefault
+			relationship: 01ec0edc-e24d-44b2-982e-9a3db76ffb0c
+			defaultHierarchy: LocalDateTable_11ba8cd2-fd85-4f78-86c5-01c6c88c30ba.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaTermino
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: af1ec2e7-dbf5-4a2c-8944-264457ccc2f5
+		summarizeBy: none
+		sourceColumn: FechaTermino
+
+		variation Variación
+			isDefault
+			relationship: 32d74f75-9092-446e-b92c-ea2f755cbbc6
+			defaultHierarchy: LocalDateTable_02738159-7b59-4325-9a3d-858a230e9982.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaGestion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2470175c-8afb-4a70-9233-541cc1afd224
+		summarizeBy: none
+		sourceColumn: FechaGestion
+
+		variation Variación
+			isDefault
+			relationship: df188664-b092-4afc-8a2a-31b982a1f83f
+			defaultHierarchy: LocalDateTable_b4f5eb9a-c6da-431a-a3a4-33c95fe70414.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vigencia
+		dataType: int64
+		formatString: 0
+		lineageTag: 22c6d247-7554-425c-a22b-40ff04c73316
+		summarizeBy: sum
+		sourceColumn: Vigencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaRegistro
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 965884a6-4260-4d26-a16f-82be0cf3bf3f
+		summarizeBy: none
+		sourceColumn: FechaRegistro
+
+		variation Variación
+			isDefault
+			relationship: 1615afef-9739-4595-b750-d619dd196b4d
+			defaultHierarchy: LocalDateTable_81578210-b887-4f20-96e7-2248413c0574.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Asignado
+		dataType: int64
+		formatString: 0
+		lineageTag: a376f3b1-2b03-4c38-b983-3c5d8230b920
+		summarizeBy: sum
+		sourceColumn: Asignado
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasGestion
+		dataType: int64
+		formatString: 0
+		lineageTag: 216a2c34-0e7c-4a10-a14e-ddc6dbdfaa89
+		summarizeBy: sum
+		sourceColumn: DiasGestion
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaximoDias
+		dataType: int64
+		formatString: 0
+		lineageTag: 1160d897-2422-4066-9c2d-6eaa05195cfa
+		summarizeBy: sum
+		sourceColumn: MaximoDias
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BITACORA = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla6_Table = Origen{[Item="Tabla6",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla6_Table,{{"IdBitacora", Int64.Type}, {"IdReclamo", Int64.Type}, {"IdTipoBitacora", Int64.Type}, {"IdEstado", Int64.Type}, {"IdUsuario", Int64.Type}, {"FechaInicio", type datetime}, {"FechaTermino", type datetime}, {"FechaGestion", type datetime}, {"Vigencia", Int64.Type}, {"FechaRegistro", type datetime}, {"Asignado", Int64.Type}, {"DiasGestion", Int64.Type}, {"MaximoDias", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

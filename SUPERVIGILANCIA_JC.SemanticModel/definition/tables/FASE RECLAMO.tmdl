@@ -1,0 +1,32 @@
+table 'FASE RECLAMO'
+	lineageTag: cdb5ffb9-91df-4589-8156-9f8e7a677fc8
+
+	column IDFASE
+		dataType: int64
+		formatString: 0
+		lineageTag: 8232f65d-d8d2-4de3-833d-9e92bfd5195d
+		summarizeBy: none
+		sourceColumn: IDFASE
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECLAMO
+		dataType: string
+		lineageTag: 33f7759f-95f8-4092-a331-67000b323a69
+		summarizeBy: none
+		sourceColumn: RECLAMO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FASE RECLAMO' = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla10_Table = Origen{[Item="Tabla10",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla10_Table,{{"IDFASE", Int64.Type}, {"RECLAMO", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

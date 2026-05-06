@@ -1,0 +1,54 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Medidas","PAGO_CONTABLE","TRAMITES_DOM","TIPO_TRAMITE","SUBTIPO_TRAMITE","SOLICITUD_ESTADO","BITACORA","REGION","COMUNA","RECLAMO","FASE RECLAMO","TIPO_RECLAMO","ESTADO_SUPERVIGILANCIA","Tabla Descarga","Usuario"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_5cb6bc05-094f-41dc-9b37-c35f2df56dcb
+ref table Medidas
+ref table PAGO_CONTABLE
+ref table TRAMITES_DOM
+ref table LocalDateTable_0b66f5dc-f908-45a5-892b-aaa01e6571ed
+ref table TIPO_TRAMITE
+ref table SUBTIPO_TRAMITE
+ref table SOLICITUD_ESTADO
+ref table BITACORA
+ref table LocalDateTable_11ba8cd2-fd85-4f78-86c5-01c6c88c30ba
+ref table LocalDateTable_02738159-7b59-4325-9a3d-858a230e9982
+ref table LocalDateTable_b4f5eb9a-c6da-431a-a3a4-33c95fe70414
+ref table LocalDateTable_81578210-b887-4f20-96e7-2248413c0574
+ref table REGION
+ref table COMUNA
+ref table RECLAMO
+ref table LocalDateTable_2b24a4d9-0778-4e62-98a8-b123a5437176
+ref table LocalDateTable_dec936e7-baba-4cda-b226-c408cc819b63
+ref table LocalDateTable_e9a4cd53-f78a-41d6-abc7-7421f9fe8009
+ref table LocalDateTable_5f59d610-727b-4205-b5d2-8c8aa9e2f6b5
+ref table LocalDateTable_51207a1e-3e0f-4340-8df8-b98a8b63b30a
+ref table 'FASE RECLAMO'
+ref table TIPO_RECLAMO
+ref table LocalDateTable_c27d8ed9-2f19-4649-b646-975ab06ddb21
+ref table ESTADO_SUPERVIGILANCIA
+ref table RegionComunaDistintas
+ref table DisTipReclamo
+ref table 'Tabla Descarga'
+ref table LocalDateTable_86e9555a-4a80-41bf-b230-a4ee6a57ddb5
+ref table LocalDateTable_1c0f29fe-8626-4593-a8df-bafe5efc78fa
+ref table LocalDateTable_6fb4bc53-6b6a-4698-98d4-b418924d67f2
+ref table LocalDateTable_e898273c-7d8f-4550-8963-325d9415d0fa
+ref table LocalDateTable_735449f6-0f3f-433b-b72a-71cc0d4a0ace
+ref table LocalDateTable_4ba97a28-8377-4647-8472-a9ab93b8650e
+ref table Usuario
+
+ref role ROL_DOM
+
+ref cultureInfo es-CL
+

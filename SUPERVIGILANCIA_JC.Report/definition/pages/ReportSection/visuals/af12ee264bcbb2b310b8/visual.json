@@ -1,0 +1,400 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "af12ee264bcbb2b310b8",
+  "position": {
+    "x": 715.33265097236438,
+    "y": 11.791197543500511,
+    "z": 17000,
+    "height": 48.474923234390992,
+    "width": 189.96929375639712,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "FlowVisual_C29F1DCC_81F5_4973_94AD_0517D44CC06A",
+    "query": {
+      "queryState": {
+        "table": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "IdReclamo"
+                }
+              },
+              "queryRef": "Tabla Descarga.IdReclamo",
+              "nativeQueryRef": "IdReclamo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "ESTADO_SUPERVIGILANCIA.ESTADODESCRIPCION"
+                }
+              },
+              "queryRef": "Tabla Descarga.ESTADO_SUPERVIGILANCIA.ESTADODESCRIPCION",
+              "nativeQueryRef": "Estado",
+              "displayName": "Estado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "FASE RECLAMO.RECLAMO"
+                }
+              },
+              "queryRef": "Tabla Descarga.FASE RECLAMO.RECLAMO",
+              "nativeQueryRef": "Fase",
+              "displayName": "Fase"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "FolioReclamo"
+                }
+              },
+              "queryRef": "Sum(Tabla Descarga.FolioReclamo)",
+              "nativeQueryRef": "FolioReclamo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "REGION.REGION"
+                }
+              },
+              "queryRef": "Tabla Descarga.REGION.REGION",
+              "nativeQueryRef": "Region",
+              "displayName": "Region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "COMUNA.COMUNA"
+                }
+              },
+              "queryRef": "Tabla Descarga.COMUNA.COMUNA",
+              "nativeQueryRef": "Comuna",
+              "displayName": "Comuna"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "FechaProceso"
+                }
+              },
+              "queryRef": "Tabla Descarga.FechaProceso",
+              "nativeQueryRef": "FechaProceso"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "Plazo"
+                }
+              },
+              "queryRef": "Sum(Tabla Descarga.Plazo)",
+              "nativeQueryRef": "Plazo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla Descarga"
+                    }
+                  },
+                  "Property": "DifDiasProceso"
+                }
+              },
+              "queryRef": "Tabla Descarga.DifDiasProceso",
+              "nativeQueryRef": "DiasDesdeProceso",
+              "displayName": "DiasDesdeProceso"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RECLAMO"
+                    }
+                  },
+                  "Property": "Descripcion"
+                }
+              },
+              "queryRef": "RECLAMO.Descripcion",
+              "nativeQueryRef": "Descripcion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RECLAMO"
+                    }
+                  },
+                  "Property": "Autor"
+                }
+              },
+              "queryRef": "RECLAMO.Autor",
+              "nativeQueryRef": "Autor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "RECLAMO"
+                    }
+                  },
+                  "Property": "AsignadoA"
+                }
+              },
+              "queryRef": "Sum(RECLAMO.AsignadoA)",
+              "nativeQueryRef": "AsignadoA"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabla Descarga"
+                  }
+                },
+                "Property": "IdReclamo"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "flowInfo": [
+        {
+          "properties": {
+            "FlowId": {
+              "expr": {
+                "Literal": {
+                  "Value": "'/providers/Microsoft.ProcessSimple/environments/Default-4fb559d2-ee3a-42bb-9194-d234950567e1/flows/bb6872ab-fad5-4dfd-b2f2-98c686cf1e22'"
+                }
+              }
+            },
+            "ManagementUri": {
+              "expr": {
+                "Literal": {
+                  "Value": "'https://us.api.flow.microsoft.com/providers/Microsoft.ProcessSimple'"
+                }
+              }
+            },
+            "EnvironmentId": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "EnvironmentLocation": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "EnvironmentRegion": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "buttonText": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Descargar Reporte'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "verticalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "selected"
+          }
+        }
+      ],
+      "buttonFill": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

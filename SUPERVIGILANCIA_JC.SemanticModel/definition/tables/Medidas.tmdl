@@ -1,0 +1,85 @@
+table Medidas
+	lineageTag: 6ec13776-93d4-49fe-a209-98985543d926
+
+	measure 'A Tiempo' = ```
+			
+			           CALCULATE(COUNTROWS(RECLAMO),FILTER('RECLAMO','RECLAMO'[EstadoFinal] = "A Tiempo")) + 0
+			```
+		formatString: 0
+		lineageTag: 17432022-5499-49f4-8601-f2f4e4d3b57a
+
+	measure Atrasados = ```
+			CALCULATE(COUNTROWS(RECLAMO),FILTER('RECLAMO','RECLAMO'[EstadoFinal] = "Atrasados")) + 0 
+			```
+		formatString: 0
+		lineageTag: 8ce5f2f1-74dd-48b5-8825-e59685a264f9
+
+	measure 'Por Vencer' = ```
+			
+			           CALCULATE(COUNTROWS(RECLAMO),FILTER('RECLAMO','RECLAMO'[EstadoFinal] = "Por Vencer")) + 0
+			```
+		formatString: 0
+		lineageTag: d3302d89-06f9-4ccc-a391-031e9745033a
+
+	measure 'Cant Tipo Reclamo' = ```
+			COUNT(RECLAMO[IdTipoReclamo]) 
+			```
+		formatString: 0
+		lineageTag: a9d2f7c3-35bb-4c94-a292-90148c522e85
+
+	measure 'Regiones Val' = ```
+			
+			 VAR _CATEGORY_IN_RECLAMO =
+			     VALUES ('RECLAMO'[IdRegion])
+			 RETURN
+			     IF (
+			         MAX(REGION[IDREGION]) IN _CATEGORY_IN_RECLAMO, 
+			         1,
+			         0
+			     )
+			```
+		formatString: 0
+		lineageTag: 6b2a44f3-2089-4e27-8b49-0b5489542bbd
+
+	measure TotalAtiempoAtra = CALCULATE(COUNTROWS('RECLAMO'), FILTER('RECLAMO', 'RECLAMO'[IdEstado] <> 5))
+		formatString: 0
+		lineageTag: 482fa563-da4b-41de-ba34-a4ced6764c31
+
+	measure PorATiempo = [A Tiempo] / [TotalAtiempoAtra]
+		lineageTag: 9e9b37ff-2e09-4d3d-811f-358eed9dfbdd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PorAtrasado = ```
+			[Atrasados] / [TotalAtiempoAtra] 
+			```
+		lineageTag: 5280f791-d32a-4129-bf72-0ae11eb16f0b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fuera de Plazo' = ```
+			
+			           CALCULATE(COUNTROWS(RECLAMO),FILTER('RECLAMO','RECLAMO'[EstadoFinal] = "Fuera de Plazo")) + 0
+			```
+		formatString: 0
+		lineageTag: ba1563d9-a9e6-4fca-bbd1-6b13ed3a4fb4
+
+	measure Medida = USERNAME()
+		lineageTag: 78b64d5d-c916-4f7a-beb5-ea45e1007b0f
+
+	measure 'Total AtieyAtra' = [A Tiempo] + [Atrasados]
+		formatString: 0
+		lineageTag: 6ac55743-2cd3-415c-9cc2-c026fc964029
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

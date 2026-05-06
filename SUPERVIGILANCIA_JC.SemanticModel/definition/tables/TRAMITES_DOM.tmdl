@@ -1,0 +1,260 @@
+table TRAMITES_DOM
+	lineageTag: 4899b6fd-5cc3-488c-a6b9-0c0d1c81ea86
+
+	column IdTramiteDom
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bfc492d-e0c3-4497-8cc5-7ff7c0bf6662
+		summarizeBy: sum
+		sourceColumn: IdTramiteDom
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSolicitud
+		dataType: int64
+		formatString: 0
+		lineageTag: 6790d1a9-bc98-4617-9aae-8c3d77b03a2d
+		summarizeBy: sum
+		sourceColumn: IdSolicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSubTipoTramite
+		dataType: string
+		lineageTag: 069923de-c1b1-421f-aafa-05e5238c3ac6
+		summarizeBy: none
+		sourceColumn: IdSubTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoTramite
+		dataType: int64
+		formatString: 0
+		lineageTag: e8f5d370-4de5-46f0-9e48-989345e3cdbd
+		summarizeBy: none
+		sourceColumn: IdTipoTramite
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSolicitudEstado
+		dataType: int64
+		formatString: 0
+		lineageTag: ad8ff098-0806-4307-be00-25da38db7273
+		summarizeBy: none
+		sourceColumn: IdSolicitudEstado
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoEdificacion
+		dataType: string
+		lineageTag: 644941d8-0d3f-4dec-b02f-4ec211680c20
+		summarizeBy: none
+		sourceColumn: IdTipoEdificacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoMunicipalidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d5b2d38-360e-4032-af62-5e80418c4232
+		summarizeBy: sum
+		sourceColumn: CodigoMunicipalidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolioSolicitud
+		dataType: string
+		lineageTag: 82ef0704-59b9-4ba3-86a0-81ee387f5727
+		summarizeBy: none
+		sourceColumn: FolioSolicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column TipoArea
+		dataType: string
+		lineageTag: ce5072c9-1dd0-41a2-9b06-54f0a6f13926
+		summarizeBy: none
+		sourceColumn: TipoArea
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaIngreso
+		dataType: string
+		lineageTag: 3601dfe5-42bf-4f09-b0c7-9afa1c1d58cc
+		summarizeBy: none
+		sourceColumn: FechaIngreso
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activo
+		dataType: int64
+		formatString: 0
+		lineageTag: bb605969-9a03-4bed-bae9-d83567dc6d71
+		summarizeBy: sum
+		sourceColumn: Activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdFase
+		dataType: string
+		lineageTag: 088501cf-16ec-4849-b675-74a0849d732d
+		summarizeBy: none
+		sourceColumn: IdFase
+
+		annotation SummarizationSetBy = Automatic
+
+	column RutSolicitante
+		dataType: int64
+		formatString: 0
+		lineageTag: 671092e0-eecc-4ba3-9c39-f5af140bcbc5
+		summarizeBy: sum
+		sourceColumn: RutSolicitante
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreCompleto
+		dataType: string
+		lineageTag: 5508344d-a62e-4b7f-b18a-b2fb638f2efb
+		summarizeBy: none
+		sourceColumn: NombreCompleto
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdPersonaRol
+		dataType: string
+		lineageTag: 4c94c604-f834-4507-8923-5bac98034bfe
+		summarizeBy: none
+		sourceColumn: IdPersonaRol
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoResponsable
+		dataType: string
+		lineageTag: 0f713f6f-5a0d-4a08-81e0-2ec56b0a8ce0
+		summarizeBy: none
+		sourceColumn: CodigoResponsable
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreResponsable
+		dataType: string
+		lineageTag: a0207e26-ebd4-4f81-9b9c-ff2381e39745
+		summarizeBy: none
+		sourceColumn: NombreResponsable
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaInicioPlazo
+		dataType: string
+		lineageTag: 48391a09-4150-4d3e-86d6-f56924623e6b
+		summarizeBy: none
+		sourceColumn: FechaInicioPlazo
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaFinPlazo
+		dataType: string
+		lineageTag: b5d8ec50-0c47-4957-a3f3-aa7b6322f5e2
+		summarizeBy: none
+		sourceColumn: FechaFinPlazo
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisorIndependiente
+		dataType: string
+		lineageTag: 76559a10-1354-4a0f-9ab1-b199df406c57
+		summarizeBy: none
+		sourceColumn: RevisorIndependiente
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaCreacion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d257611f-f353-4870-a343-fbb88b866b08
+		summarizeBy: none
+		sourceColumn: FechaCreacion
+
+		variation Variación
+			isDefault
+			relationship: 5121544a-b3b9-46eb-9199-78d6feb52f3b
+			defaultHierarchy: LocalDateTable_0b66f5dc-f908-45a5-892b-aaa01e6571ed.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FolioCertificado
+		dataType: string
+		lineageTag: 8ded0f91-6650-4146-941e-cb3eed6ec236
+		summarizeBy: none
+		sourceColumn: FolioCertificado
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaTermino
+		dataType: string
+		lineageTag: 17b2ba84-3387-48fc-9cf7-799a76a044af
+		summarizeBy: none
+		sourceColumn: FechaTermino
+
+		annotation SummarizationSetBy = Automatic
+
+	column VersionActual
+		dataType: string
+		lineageTag: 4977c2c8-4769-48d4-80a5-c7508eb19afa
+		summarizeBy: none
+		sourceColumn: VersionActual
+
+		annotation SummarizationSetBy = Automatic
+
+	column EsPrimeroIngreso
+		dataType: string
+		lineageTag: ef82731d-4087-4659-98d1-e9cdfa3ff734
+		summarizeBy: none
+		sourceColumn: EsPrimeroIngreso
+
+		annotation SummarizationSetBy = Automatic
+
+	column UltimoPasoRegistrado
+		dataType: string
+		lineageTag: 81821aef-dee4-412c-8f26-d17862a45f4a
+		summarizeBy: none
+		sourceColumn: UltimoPasoRegistrado
+
+		annotation SummarizationSetBy = Automatic
+
+	column EsRecepcionTotal
+		dataType: string
+		lineageTag: f0e7a28d-83c5-42c6-8de9-0904630adeb1
+		summarizeBy: none
+		sourceColumn: EsRecepcionTotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoSolicitudPrevia
+		dataType: string
+		lineageTag: b951337d-2b9d-4ed0-ae44-ef4dfe4ecee9
+		summarizeBy: none
+		sourceColumn: CodigoSolicitudPrevia
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisorCalculoEstructural
+		dataType: string
+		lineageTag: b8fa6b55-f595-4a76-9a71-a275ed5313bf
+		summarizeBy: none
+		sourceColumn: RevisorCalculoEstructural
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TRAMITES_DOM = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla2_Table = Origen{[Item="Tabla2",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla2_Table,{{"IdTramiteDom", Int64.Type}, {"IdSolicitud", Int64.Type}, {"IdSubTipoTramite", type text}, {"IdTipoTramite", Int64.Type}, {"IdSolicitudEstado", Int64.Type}, {"IdTipoEdificacion", type text}, {"CodigoMunicipalidad", Int64.Type}, {"FolioSolicitud", type text}, {"TipoArea", type text}, {"FechaIngreso", type text}, {"Activo", Int64.Type}, {"IdFase", type text}, {"RutSolicitante", Int64.Type}, {"NombreCompleto", type text}, {"IdPersonaRol", type text}, {"CodigoResponsable", type text}, {"NombreResponsable", type text}, {"FechaInicioPlazo", type text}, {"FechaFinPlazo", type text}, {"RevisorIndependiente", type text}, {"FechaCreacion", type datetime}, {"FolioCertificado", type text}, {"FechaTermino", type text}, {"VersionActual", type text}, {"EsPrimeroIngreso", type text}, {"UltimoPasoRegistrado", type text}, {"EsRecepcionTotal", type text}, {"CodigoSolicitudPrevia", type text}, {"RevisorCalculoEstructural", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,32 @@
+table REGION
+	lineageTag: cc8ecd6b-e7ea-448c-8920-1c4e0ef676c1
+
+	column IDREGION
+		dataType: int64
+		formatString: 0
+		lineageTag: 48118ef6-22c3-49fc-9517-6a89ba81b619
+		summarizeBy: none
+		sourceColumn: IDREGION
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION
+		dataType: string
+		lineageTag: a2fd0ff5-88ac-4ec3-ba53-3c3d50ecfeff
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition REGION = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla7_Table = Origen{[Item="Tabla7",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla7_Table,{{"IDREGION", Int64.Type}, {"REGION", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

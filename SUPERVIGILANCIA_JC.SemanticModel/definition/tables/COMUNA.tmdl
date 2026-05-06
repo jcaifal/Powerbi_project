@@ -1,0 +1,41 @@
+table COMUNA
+	lineageTag: ecb4b60e-5916-4dd9-a155-733d2418c2db
+
+	column IDCOMUNA
+		dataType: int64
+		formatString: 0
+		lineageTag: a63685e7-8462-4903-96be-f505ca96d667
+		summarizeBy: none
+		sourceColumn: IDCOMUNA
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMUNA
+		dataType: string
+		lineageTag: 121fede7-408f-448e-936a-5868e7317391
+		summarizeBy: none
+		sourceColumn: COMUNA
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGION
+		dataType: int64
+		formatString: 0
+		lineageTag: 6240382b-3bda-445f-a970-6b13689c41ac
+		summarizeBy: none
+		sourceColumn: REGION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition COMUNA = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\jncai\Desktop\Trabajo_2023\PBI_ACTIS\DatosMinvu.xlsx"), null, true),
+				    Tabla8_Table = Origen{[Item="Tabla8",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Tabla8_Table,{{"IDCOMUNA", Int64.Type}, {"COMUNA", type text}, {"REGION", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
